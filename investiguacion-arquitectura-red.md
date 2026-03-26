@@ -65,15 +65,19 @@ Porque las IPs son difíciles de recordar y pueden cambiar. Un nombre de dominio
 ---
 ### 4. Subnets (nivel básico pero clave)
 
-Responder:
+**¿Qué es una subred?**
+Una subred es una porción de una red más grande con su propio rango de IPs. Es como dividir un edificio en pisos o departamentos independientes.
 
-- ¿Qué es una subred?
-- ¿Para qué sirve?
-- ¿Por qué dividir redes?
+**¿Para qué sirve?**
+Para organizar, aislar y controlar el tráfico entre grupos de dispositivos. Mejora la seguridad y la eficiencia de la red.
+
+**¿Por qué dividir redes?**
+Para reducir el tráfico broadcast, aplicar reglas distintas a cada grupo, mejorar la seguridad y aprovechar mejor las IPs disponibles.
 
 👉 Ejemplo developer:
 
-- Red local vs red en cloud
+- **Red local**: tu máquina tiene `192.168.1.5`, el router es `192.168.1.1` — misma subred `/24`.
+- **Red en cloud (AWS VPC)**: tu app en `10.0.1.0/24` (subred pública) y tu base de datos en `10.0.2.0/24` (subred privada, sin acceso desde internet).
 
 ---
 ### 5. Conexión directa con desarrollo (CRÍTICO)
