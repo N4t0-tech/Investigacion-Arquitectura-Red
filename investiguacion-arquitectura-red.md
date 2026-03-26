@@ -82,18 +82,17 @@ Para reducir el tráfico broadcast, aplicar reglas distintas a cada grupo, mejor
 ---
 ### 5. Conexión directa con desarrollo (CRÍTICO)
 
-Responder:
+**¿Qué pasa cuando tu app...?**
 
-- ¿Qué pasa cuando tu app:
-    - No encuentra el servidor?
-    - No resuelve el dominio?
-    - No puede conectarse?
+- **No encuentra el servidor**: el hostname o IP están mal configurados, el servidor está caído, o hay un problema de routing.
+- **No resuelve el dominio**: DNS falló al traducir el nombre a IP. Puede ser dominio mal escrito, DNS caído, o caché con dato incorrecto.
+- **No puede conectarse**: el servidor existe y resuelve, pero algo bloquea la conexión: firewall, puerto cerrado, o la app no está escuchando.
 
 👉 Relacionar con:
 
-- DNS
-- IP
-- Red
+- **DNS**: si falla la resolución, la app ni intenta conectarse. Error típico: `getaddrinfo ENOTFOUND hostname`.
+- **IP**: si la IP es incorrecta o no alcanzable, la conexión falla a nivel red. Error: `ECONNREFUSED` o `ETIMEDOUT`.
+- **Red**: si hay un problema de enrutamiento o firewall entre tu app y el servidor, la conexión nunca llega aunque todo lo demás esté bien.
 ---
 
 ### 6. Problemas reales (debugging)
