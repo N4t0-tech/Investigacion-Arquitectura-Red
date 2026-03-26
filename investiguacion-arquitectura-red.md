@@ -138,8 +138,12 @@ Crear analogía:
 - Subnet = barrios dentro de una ciudad
 
 ---
-Responder:
+**¿Qué es un VPC en cloud?**
+Una VPC (Virtual Private Cloud) es tu propia red privada dentro de la nube. Es como tener una LAN tuya dentro de AWS/GCP/Azure, donde tú controlas las subnets, rutas y reglas de acceso. Todo lo que metes en una VPC queda aislado del resto de internet por defecto.
 
-- ¿Qué es un VPC en cloud?
-- ¿Qué es una IP privada vs pública?
-- ¿Qué es un load balancer?
+**¿Qué es una IP privada vs pública?**
+- **IP privada**: solo visible dentro de tu red (rangos: `10.x.x.x`, `192.168.x.x`, `172.16.x.x`). No se puede acceder desde internet.
+- **IP pública**: visible desde internet, asignada por tu proveedor. Un servidor en cloud suele tener ambas: pública para recibir tráfico externo, privada para comunicarse con otros servicios internos.
+
+**¿Qué es un load balancer?**
+Es un componente que distribuye el tráfico entrante entre múltiples servidores. Si tienes 3 instancias de tu app corriendo, el load balancer reparte las peticiones para que ninguna se sature. También detecta servidores caídos y deja de enviarles tráfico automáticamente.
