@@ -4,9 +4,9 @@ Completar tabla:
 
 |Concepto|Definición simple|Nivel técnico breve|Ejemplo real|
 |---|---|---|---|
-|Modelo OSI||||
-|Subred (Subnet)||||
-|DNS||||
+|Modelo OSI|Modelo de 7 capas que explica cómo viaja la información por la red. Divide el proceso en pasos ordenados.|Estándar ISO/IEC 7498-1 que separa las funciones de red en capas lógicas independientes.|Cuando envías un correo, el mensaje pasa por cada capa antes de llegar a internet.|
+|Subred (Subnet)|División de una red grande en redes más pequeñas. Permite organizar y separar dispositivos.|Rango de IPs definido por una máscara (ej: 192.168.1.0/24). Limita el dominio de broadcast.|Tu red de casa (192.168.1.x) está separada de la red de tu trabajo.|
+|DNS|Sistema que traduce nombres de dominio a direcciones IP. Es como la agenda de contactos de internet.|Protocolo distribuido en jerarquía: root → TLD → autoritativo → caché local. Puerto 53 UDP/TCP.|Cuando escribes google.com, DNS lo convierte a una IP para que tu navegador pueda conectarse.|
 
 👉 Reglas:
 
