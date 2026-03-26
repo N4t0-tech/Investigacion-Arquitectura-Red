@@ -116,11 +116,9 @@ Escenario:
 
 > “Tu aplicación está deployada, pero nadie puede acceder”
 
-Responder:
-
-- ¿Es problema de DNS?
-- ¿Es problema de red?
-- ¿Es problema de configuración?
+- **¿Es problema de DNS?** Verificar con `nslookup tudominio.com`. Si no resuelve o apunta a una IP incorrecta, el problema está en DNS (registros A/CNAME mal configurados o propagación pendiente).
+- **¿Es problema de red?** Verificar con `ping IP` y `traceroute IP`. Si no hay respuesta, revisar reglas de firewall, security groups en cloud, y que el servidor esté encendido.
+- **¿Es problema de configuración?** Si el servidor responde pero la app falla, verificar con `curl -v https://tudominio.com`. Causas: app no iniciada, escucha en puerto equivocado, o certificado SSL expirado.
 
 ---
 ### 8. Analogía obligatoria
