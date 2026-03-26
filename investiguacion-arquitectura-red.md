@@ -127,9 +127,9 @@ Crear analogía:
 
 |Concepto|Analogía|
 |---|---|
-|OSI||
-|DNS||
-|Subnet||
+|OSI|Enviar una carta: la escribes (aplicación), la metes en sobre (presentación), la llevas a correos (sesión), el correo la transporta (transporte), decide la ruta (red), la carga en camión (enlace) y la mueve físicamente (física).|
+|DNS|La agenda de contactos del teléfono: no memorizas el número de cada persona, solo su nombre. DNS hace lo mismo entre dominios e IPs.|
+|Subnet|Barrios dentro de una ciudad: cada barrio tiene su rango de calles (IPs), puede tener sus propias reglas (firewall), y el tráfico entre barrios pasa por una avenida principal (router).|
 
 👉 Ejemplo esperado:
 
