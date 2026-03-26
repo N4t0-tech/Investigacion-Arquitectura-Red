@@ -97,13 +97,18 @@ Para reducir el tráfico broadcast, aplicar reglas distintas a cada grupo, mejor
 
 ### 6. Problemas reales (debugging)
 
-Responder:
+**¿Qué significa...?**
 
-- ¿Qué significa:
-    - “DNS not found”?
-    - “Host unreachable”?
-    - “Network error”?
-- ¿Qué revisarías primero como developer?
+- **”DNS not found”**: el sistema no pudo traducir el dominio a una IP. Causas: dominio inexistente, DNS mal configurado, o caché corrupta.
+- **”Host unreachable”**: la IP existe pero no se puede llegar a ella. Causas: sin conectividad de red, rutas mal configuradas, o firewall bloqueando.
+- **”Network error”**: error genérico de red. Puede ser cualquier fallo: sin internet, servidor caído o puerto cerrado.
+
+**¿Qué revisarías primero como developer?**
+
+1. `ping dominio.com` — ¿hay conectividad básica?
+2. `nslookup dominio.com` o `dig dominio.com` — ¿resuelve el dominio?
+3. `curl -v http://dominio.com:puerto` — ¿el puerto está abierto y responde?
+4. Logs del servidor — ¿qué dice la app del lado del servidor?
 ---
 ### 7. Caso práctico real
 
