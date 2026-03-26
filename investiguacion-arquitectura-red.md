@@ -39,20 +39,28 @@ Estandariza cómo dispositivos y protocolos deben comunicarse, facilitando la in
 ---
 ### 3. DNS (lo que usas todos los días)
 
-Responder:
+**¿Qué es DNS?**
+DNS (Domain Name System) es el sistema que traduce nombres legibles por humanos (google.com) en direcciones IP numéricas (142.250.80.46) que las máquinas entienden.
 
-- ¿Qué es DNS?
-- ¿Por qué no usamos IP directamente?
+**¿Por qué no usamos IP directamente?**
+Porque las IPs son difíciles de recordar y pueden cambiar. Un nombre de dominio es estable aunque la IP detrás se actualice.
 
 👉 Explicar paso a paso:
 
 > ¿Qué pasa cuando escribes:
-> 
+>
 > `google.com` en el navegador?
+
+1. El navegador revisa su **caché local**: ¿ya conozco la IP de google.com?
+2. Si no, consulta al **DNS resolver** de tu proveedor de internet (ISP).
+3. El resolver pregunta al **servidor raíz** cuál es el servidor para `.com`.
+4. Luego pregunta al **servidor TLD** de `.com` quién maneja `google.com`.
+5. Finalmente consulta el **servidor autoritativo** de Google, que devuelve la IP.
+6. Tu navegador recibe la IP y realiza la conexión al servidor.
 
 👉 Flujo esperado:
 
-- Usuario → DNS → IP → servidor
+- Usuario → DNS resolver → Root → TLD → Autoritativo → IP → servidor
 
 ---
 ### 4. Subnets (nivel básico pero clave)
