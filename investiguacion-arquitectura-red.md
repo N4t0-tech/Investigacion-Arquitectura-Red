@@ -18,22 +18,23 @@ Completar tabla:
 
 ### 2. Modelo OSI (lo justo y necesario)
 
-Responder:
+**¿Qué es el modelo OSI?**
+Es un modelo de referencia que describe cómo los sistemas de comunicación se conectan entre sí, dividiendo el proceso en 7 capas bien definidas. Cada capa tiene una responsabilidad específica y solo interactúa con las capas adyacentes.
 
-- ¿Qué es el modelo OSI?
-- ¿Para qué sirve?
+**¿Para qué sirve?**
+Estandariza cómo dispositivos y protocolos deben comunicarse, facilitando la interoperabilidad entre diferentes fabricantes y sistemas. También ayuda a diagnosticar problemas de red por capas.
 
 👉 Completar tabla:
 
 |Capa|Nombre|¿Qué hace? (simple)|
 |---|---|---|
-|1|Física||
-|2|Enlace||
-|3|Red||
-|4|Transporte||
-|5|Sesión||
-|6|Presentación||
-|7|Aplicación||
+|1|Física|Transmite bits (0s y 1s) por el medio físico: cable, fibra óptica o señal WiFi.|
+|2|Enlace|Agrupa los bits en tramas y controla el acceso al medio. Usa direcciones MAC.|
+|3|Red|Determina la ruta que toman los datos entre redes distintas. Usa direcciones IP.|
+|4|Transporte|Asegura la entrega completa y ordenada de los datos. Usa TCP o UDP.|
+|5|Sesión|Establece, mantiene y cierra las sesiones de comunicación entre aplicaciones.|
+|6|Presentación|Traduce, cifra o comprime los datos para que la aplicación pueda leerlos.|
+|7|Aplicación|Es la interfaz con el usuario final. Incluye protocolos como HTTP, FTP, SMTP.|
 
 ---
 ### 3. DNS (lo que usas todos los días)
